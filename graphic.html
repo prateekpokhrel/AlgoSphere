@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Graphic Design Internship | AlgoSphere</title>
+<style>
+body{margin:0;font-family:"Inter",sans-serif;background:#f9fbff;color:#1a1a1a;line-height:1.6;}
+header{background:linear-gradient(135deg,#1565c0,#0d47a1);color:white;padding:60px 20px;text-align:center;}
+header h1{font-size:2.5rem;margin-bottom:10px;}
+header p{font-size:1.1rem;opacity:.9;}
+.container{max-width:1100px;margin:50px auto;padding:0 20px;}
+section{margin-bottom:60px;}
+h2{font-size:1.8rem;color:#0d47a1;margin-bottom:15px;}
+p{color:#333;}
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:25px;}
+.highlight-box{background:#fff;border-radius:10px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;}
+.highlight-box:hover{transform:translateY(-5px);}
+.highlight-box h3{color:#1565c0;margin-bottom:10px;}
+ul{list-style:disc;margin:15px 0 15px 30px;color:#444;}
+.cta{text-align:center;margin:60px 0;}
+.cta a{background:linear-gradient(90deg,#1565c0,#0d47a1);color:white;padding:14px 35px;border-radius:30px;text-decoration:none;font-weight:600;transition:0.3s;}
+.cta a:hover{background:linear-gradient(90deg,#0d47a1,#002171);transform:scale(1.05);}
+footer{text-align:center;background:#f1f4fa;padding:30px;font-size:0.9rem;color:#555;}
+.back{display:inline-block;margin-top:20px;color:#1565c0;text-decoration:none;font-weight:500;}
+.back:hover{text-decoration:underline;}
+
+/* Tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+.tabs button{flex:1;background:#eee;border:none;padding:10px 15px;border-radius:10px;cursor:pointer;transition:0.3s;font-weight:500;}
+.tabs button.active{background:linear-gradient(90deg,#1565c0,#0d47a1);color:white;}
+.tab-content{background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+.tab-content ul{list-style: disc;margin-left:20px;}
+
+/* Mentors */
+.mentors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.mentor-card{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;}
+.mentor-card:hover{transform:translateY(-5px);}
+.mentor-card img{width:80px;height:80px;border-radius:50%;margin-bottom:10px;}
+.mentor-card h4{color:#1565c0;margin-bottom:5px;}
+
+/* Reviews */
+.reviews{display:flex;overflow-x:auto;gap:20px;padding-bottom:10px;}
+.review-card{min-width:250px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,0.08);flex-shrink:0;transition:transform 0.3s;}
+.review-card:hover{transform:translateY(-5px);}
+.review-card h4{color:#1565c0;margin-bottom:8px;}
+
+/* FAQ */
+.faq-item{margin-bottom:15px;background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+.faq-item button{width:100%;background:none;border:none;text-align:left;padding:15px;cursor:pointer;font-weight:500;position:relative;}
+.faq-item button::after{content:'+';position:absolute;right:20px;font-size:1.2rem;}
+.faq-item button.active::after{content:'-';}
+.faq-answer{padding:0 15px 15px;display:none;color:#333;}
+.faq-answer.show{display:block;}
+
+/* Responsive */
+@media(max-width:768px){.tabs{flex-direction:column;}.reviews{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Graphic Design Internship</h1>
+  <p>Master visual design, branding, and creative tools for professional projects.</p>
+</header>
+
+<div class="container">
+
+  <section>
+    <h2>Overview</h2>
+    <p>
+      This Graphic Design internship focuses on creative design, visual communication, and practical projects using tools like Adobe Photoshop, Illustrator, and Figma.
+      Gain hands-on experience in branding, social media graphics, and professional portfolio creation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Key Details</h2>
+    <div class="highlights">
+      <div class="highlight-box"><h3>📅 Duration</h3><p>1.5 Months</p></div>
+      <div class="highlight-box"><h3>🌍 Mode</h3><p>Online / Remote</p></div>
+      <div class="highlight-box"><h3>🕒 Start Date</h3><p>28 November 2025</p></div>
+      <div class="highlight-box"><h3>🎓 Eligibility</h3><p>Anyone interested in design and creativity</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Syllabus</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="photoshop">Photoshop</button>
+      <button class="tab-btn" data-tab="illustrator">Illustrator</button>
+      <button class="tab-btn" data-tab="figma">Figma</button>
+      <button class="tab-btn" data-tab="branding">Branding</button>
+      <button class="tab-btn" data-tab="project">Project</button>
+    </div>
+    <div class="tab-content" id="photoshop">
+      <ul>
+        <li>Photoshop Basics & Photo Editing</li>
+        <li>Layer Management & Effects</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="illustrator" style="display:none;">
+      <ul>
+        <li>Vector Graphics & Logo Design</li>
+        <li>Illustrator Tools & Techniques</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="figma" style="display:none;">
+      <ul>
+        <li>UI/UX Design Fundamentals</li>
+        <li>Figma for Wireframes & Prototypes</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="branding" style="display:none;">
+      <ul>
+        <li>Branding & Visual Identity</li>
+        <li>Posters & Social Media Graphics</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="project" style="display:none;">
+      <ul>
+        <li>Final Project: Complete Branding or Campaign Design</li>
+        <li>Portfolio Compilation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Meet Your Mentors</h2>
+    <div class="mentors">
+      <div class="mentor-card">
+        <img src="customer.jpg" alt="Mentor 1">
+        <h4>Emma R.</h4>
+        <p>Creative Director & Designer</p>
+      </div>
+      <div class="mentor-card">
+        <img src="customer.jpg" alt="Mentor 2">
+        <h4>Lucas T.</h4>
+        <p>Graphic Designer & Illustrator</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Student Reviews</h2>
+    <div class="reviews">
+      <div class="review-card"><h4>Sophia K.</h4><p>"Loved the practical projects and hands-on guidance from mentors!"</p></div>
+      <div class="review-card"><h4>Ethan M.</h4><p>"Clear instructions and creative exercises improved my portfolio immensely."</p></div>
+      <div class="review-card"><h4>Mia L.</h4><p>"Fantastic internship! Real-world design challenges prepared me for freelance work."</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <button>Do I need prior design experience?</button>
+      <div class="faq-answer">No, beginners are welcome. Guidance is provided for all levels.</div>
+    </div>
+    <div class="faq-item">
+      <button>Will I get a certificate?</button>
+      <div class="faq-answer">Yes, a verified internship certificate will be awarded.</div>
+    </div>
+    <div class="faq-item">
+      <button>Which software will I use?</button>
+      <div class="faq-answer">Adobe Photoshop, Illustrator, and Figma are the main tools covered.</div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="apply.html">Apply Now</a><br>
+    <a href="index.html" class="back">← Back to Programs</a>
+  </div>
+
+</div>
+
+<footer>&copy; 2025 AlgoSphere | Learn Design. Build Creativity.</footer>
+
+<script>
+// Tab functionality
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    tabContents.forEach(c => c.style.display = 'none');
+    document.getElementById(btn.dataset.tab).style.display = 'block';
+  });
+});
+
+// FAQ toggle
+const faqBtns = document.querySelectorAll('.faq-item button');
+faqBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    const answer = btn.nextElementSibling;
+    answer.classList.toggle('show');
+  });
+});
+</script>
+
+</body>
+</html>

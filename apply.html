@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apply Now | AlgoSphere</title>
+<style>
+body {
+  margin:0;
+  font-family:"Inter",sans-serif;
+  background:#f9fbff;
+  color:#1a1a1a;
+  line-height:1.6;
+}
+header {
+  background:linear-gradient(135deg,#512da8,#311b92);
+  color:white;
+  padding:60px 20px;
+  text-align:center;
+}
+header h1 {
+  font-size:2.5rem;
+  margin-bottom:10px;
+}
+header p {
+  font-size:1.1rem;
+  opacity:.9;
+}
+.container {
+  max-width:700px;
+  margin:50px auto;
+  padding:0 20px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  padding:40px;
+}
+form label {
+  display:block;
+  margin-bottom:5px;
+  font-weight:500;
+  color:#333;
+}
+form input, form select, form textarea {
+  width:100%;
+  padding:12px 15px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:1rem;
+  transition:0.3s;
+}
+form input:focus, form select:focus, form textarea:focus {
+  outline:none;
+  border-color:#512da8;
+  box-shadow:0 0 5px rgba(81,45,168,0.3);
+}
+button {
+  background:linear-gradient(90deg,#512da8,#311b92);
+  color:white;
+  padding:14px 35px;
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+button:hover {
+  background:linear-gradient(90deg,#311b92,#1a237e);
+  transform:scale(1.05);
+}
+.back {
+  display:inline-block;
+  margin-top:20px;
+  color:#512da8;
+  text-decoration:none;
+}
+.back:hover {
+  text-decoration:underline;
+}
+footer {
+  text-align:center;
+  background:#f1f4fa;
+  padding:30px;
+  font-size:.9rem;
+  color:#555;
+  margin-top:50px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Apply for Internship</h1>
+  <p>Submit your details to join Vault Academy's internship programs</p>
+</header>
+
+<div class="container">
+  <form id="apply-form">
+    <label for="program">Select Internship Program</label>
+    <select id="program" name="program" required>
+      <option value="">-- Choose Program --</option>
+      <option value="ai-ml">AI & Machine Learning</option>
+      <option value="app-dev">App Development</option>
+      <option value="cybersecurity">Cybersecurity</option>
+      <option value="web-dev">Web Development</option>
+      <option value="python">Python Programming</option>
+      <option value="java">Java Programming</option>
+      <option value="data-science">Data Science</option>
+      <option value="graphic-design">Graphic Design</option>
+    </select>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
+
+    <label for="resume">Upload Resume (PDF)</label>
+    <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+    <button type="submit">Submit Application</button>
+  </form>
+  <a href="index.html" class="back">← Back to Programs</a>
+</div>
+
+<footer>
+  &copy; 2025 AlgoSphere | Innovate with Internships
+</footer>
+
+<script>
+// Simple form submit simulation
+document.getElementById('apply-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert("Your application has been submitted successfully!");
+  this.reset();
+});
+</script>
+
+</body>
+</html>

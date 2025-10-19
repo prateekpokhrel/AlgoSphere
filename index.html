@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Programs | AlgoSphere</title>
+<style>
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #e8f0ff 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+  overflow-x: hidden; /* allow vertical scroll */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 50px;
+  color: #0d47a1;
+}
+
+p.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.page {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+  padding: 0 40px 60px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(13, 71, 161, 0.15);
+  padding: 25px 30px;
+  text-align: left;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(13, 71, 161, 0.25);
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  color: #0d47a1;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  color: #333;
+  font-size: 0.96rem;
+}
+
+ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+ul li::before {
+  content: "•";
+  color: #1565c0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  background: linear-gradient(90deg, #1565c0, #0d47a1);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #0d47a1, #002171);
+  transform: scale(1.05);
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.controls button {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background: linear-gradient(135deg, #0d47a1, #002171);
+  transform: translateY(-2px);
+}
+
+/* Indicator dots */
+.dots {
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #1565c0;
+}
+
+/* Review section */
+.review-section {
+  max-width: 1100px;
+  margin: 80px auto 60px;
+  padding: 0 20px;
+}
+
+.review-section h2 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.1);
+  padding: 20px 25px;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(13, 71, 161, 0.2);
+}
+
+.review-card h3 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.review-card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+    padding: 0 20px 40px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Internship Programs</h1>
+<p class="subtitle">Explore our career-oriented virtual programs</p>
+
+<div class="container">
+  <div class="slider" id="slider">
+    <!-- Page 1 -->
+    <div class="page">
+      <div class="card">
+        <h2>Web Development</h2>
+        <ul>
+          <li>Duration: 2 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 12/11/2025</li>
+        </ul>
+        <a href="webdev.html" class="btn">View Details</a>
+      </div>
+      <div class="card">
+        <h2>App Development</h2>
+        <ul>
+          <li>Duration: 2 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 06/11/2025</li>
+        </ul>
+        <a href="app.html" class="btn">View Details</a>
+      </div>
+      <div class="card">
+        <h2>Python Programming</h2>
+        <ul>
+          <li>Duration: 1.5 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 08/11/2025</li>
+        </ul>
+        <a href="python.html" class="btn">View Details</a>
+      </div>
+      <div class="card">
+        <h2>Java Programming</h2>
+        <ul>
+          <li>Duration: 2 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 10/12/2025</li>
+        </ul>
+        <a href="java.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+      <div class="card">
+        <h2>Data Science</h2>
+        <ul>
+          <li>Duration: 3 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 15/01/2026</li>
+        </ul>
+        <a href="data_science.html" class="btn">View Details</a>
+      </div>
+      <div class="card">
+        <h2>AI & ML</h2>
+        <ul>
+          <li>Duration: 2.5 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 20/01/2025</li>
+        </ul>
+        <a href="ai_ml.html" class="btn">View Details</a>
+        </div>
+      <div class="card">
+        <h2>Cybersecurity</h2>
+        <ul>
+          <li>Duration: 2 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 25/11/2025</li>
+        </ul>
+        <a href="cyber.html" class="btn">View Details</a>
+      </div>
+      <div class="card">
+        <h2>Graphic Design</h2>
+        <ul>
+          <li>Duration: 1.5 months</li>
+          <li>Location: Virtual</li>
+          <li>Start Date: 28/11/2025</li>
+        </ul>
+        <a href="graphic.html" class="btn">View Details</a>
+      </div>
+    </div>
+  </div>
+
+ <div class="controls">
+    <button id="prev-btn">◀ Prev</button>
+    <button id="next-btn">Next ▶</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+<!-- Review Section -->
+<div class="review-section">
+  <h2>Student Reviews</h2>
+  <div class="reviews">
+    <div class="review-card">
+      <h3>Shradha Khapra</h3>
+      <p>"The Web Development internship gave me real project experience. Mentors were amazing! It helped me to crack my deram job at Microsoft."</p>
+    </div>
+    <div class="review-card">
+      <h3>Dev Joshi</h3>
+      <p>"Python Programming internship helped me build practical skills and my resume."</p>
+    </div>
+    <div class="review-card">
+      <h3>Priya Sharma</h3>
+      <p>"AI & ML internship was challenging and highly practical. I feel confident in my skills now."</p>
+    </div>
+    <div class="review-card">
+      <h3>Aman Gupta</h3>
+      <p>"Graphic Design internship boosted my creativity and portfolio. Excellent mentorship!"</p>
+    </div>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<div class="about-section" style="max-width:1100px; margin:60px auto 80px; padding:0 20px; text-align:center;">
+  <h2 style="color:#0d47a1; font-size:2rem; margin-bottom:30px;">About Us</h2>
+  <p style="font-size:1rem; color:#333; line-height:1.6; max-width:900px; margin:auto;">
+    AlgoSphere is dedicated to bridging the gap between academic knowledge and real-world skills. 
+    We offer career-oriented virtual internships in Web Development, AI & ML, Data Science, Graphic Design, and more. 
+    Our programs are designed to provide hands-on experience, expert mentorship, and industry-relevant projects 
+    to help students excel in their chosen careers.
+  </p>
+  <a  class="btn" style="margin-top:20px; display:inline-block;">Learn More</a>
+</div>
+
+<script>
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
+const slider = document.getElementById("slider");
+const pages = document.querySelectorAll(".page");
+const dots = document.querySelectorAll(".dot");
+let currentStep = 0;
+
+function highlightStep(step){
+  slider.style.transform = `translateX(-${step * 100}%)`;
+  dots.forEach((d,i) => d.classList.toggle("active", i===step));
+  prevBtn.disabled = (step===0);
+  nextBtn.disabled = (step===pages.length-1);
+}
+
+prevBtn.onclick = () => {
+  if(currentStep>0){
+    currentStep--;
+    highlightStep(currentStep);
+  }
+};
+nextBtn.onclick = () => {
+  if(currentStep<pages.length-1){
+    currentStep++;
+    highlightStep(currentStep);
+  }
+};
+
+// Initialize
+highlightStep(currentStep);
+</script>
+
+</body>
+</html>

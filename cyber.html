@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cybersecurity Internship | AlgoSphere</title>
+<style>
+body {margin:0;font-family:"Inter",sans-serif;background:#f9fbff;color:#1a1a1a;line-height:1.6;}
+header {background:linear-gradient(135deg,#0d7377,#032f30);color:white;padding:60px 20px;text-align:center;position:relative;}
+header h1 {font-size:2.5rem;margin-bottom:10px;}
+header p {font-size:1.1rem;opacity:.9;}
+.container {max-width:1100px;margin:50px auto;padding:0 20px;}
+section {margin-bottom:60px;}
+h2 {font-size:1.8rem;color:#0d7377;margin-bottom:15px;}
+p {color:#333;}
+.highlights {display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:25px;}
+.highlight-box {background:#fff;border-radius:10px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;}
+.highlight-box:hover {transform:translateY(-5px);}
+.highlight-box h3 {color:#0d7377;margin-bottom:10px;}
+ul {list-style:disc;margin:15px 0 15px 30px;color:#444;}
+.cta {text-align:center;margin:60px 0;}
+.cta a {background:linear-gradient(90deg,#0d7377,#032f30);color:white;padding:14px 35px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s;}
+.cta a:hover {background:#014243;transform:scale(1.05);}
+footer {text-align:center;background:#f1f4fa;padding:30px;font-size:.9rem;color:#555;}
+.back {display:inline-block;margin-top:20px;color:#0d7377;text-decoration:none;font-weight:500;}
+.back:hover{text-decoration:underline;}
+
+/* Tabbed syllabus */
+.tabs {display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;}
+.tabs button {flex:1;background:#eee;border:none;padding:10px 15px;border-radius:10px;cursor:pointer;transition:0.3s;font-weight:500;}
+.tabs button.active {background:linear-gradient(90deg,#0d7377,#032f30);color:white;}
+.tab-content {background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+.tab-content ul {list-style: disc;margin-left:20px;}
+
+/* Mentors */
+.mentors {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.mentor-card {background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;}
+.mentor-card:hover {transform:translateY(-5px);}
+.mentor-card img {width:80px;height:80px;border-radius:50%;margin-bottom:10px;}
+.mentor-card h4 {color:#0d7377;margin-bottom:5px;}
+
+/* Reviews */
+.reviews {display:flex;overflow-x:auto;gap:20px;padding-bottom:10px;}
+.review-card {min-width:250px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,0.08);flex-shrink:0;transition:transform 0.3s;}
+.review-card:hover {transform:translateY(-5px);}
+.review-card h4 {color:#0d7377;margin-bottom:8px;}
+
+/* FAQ */
+.faq-item {margin-bottom:15px;background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+.faq-item button {width:100%;background:none;border:none;text-align:left;padding:15px;cursor:pointer;font-weight:500;position:relative;}
+.faq-item button::after {content:'+';position:absolute;right:20px;font-size:1.2rem;}
+.faq-item button.active::after {content:'-';}
+.faq-answer {padding:0 15px 15px;display:none;color:#333;}
+.faq-answer.show {display:block;}
+
+/* Responsive */
+@media(max-width:768px){.tabs{flex-direction:column;}.reviews{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cybersecurity Internship Program</h1>
+  <p>Protect digital systems, detect vulnerabilities, and build secure infrastructures.</p>
+</header>
+
+<div class="container">
+  <section>
+    <h2>Overview</h2>
+    <p>
+      This internship trains you to understand, analyze, and mitigate cyber threats. 
+      Work on simulated attacks, ethical hacking practices, and network defense mechanisms 
+      using real-world cybersecurity tools.
+    </p>
+  </section>
+
+  <section>
+    <h2>Key Details</h2>
+    <div class="highlights">
+      <div class="highlight-box"><h3>📅 Duration</h3><p>2 Months</p></div>
+      <div class="highlight-box"><h3>🧰 Tools</h3><p>Kali Linux, Wireshark, Burp Suite</p></div>
+      <div class="highlight-box"><h3>📍 Mode</h3><p>Virtual Internship</p></div>
+      <div class="highlight-box"><h3>🎓 Eligibility</h3><p>Basic Networking Knowledge</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Syllabus</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="network">Network Security</button>
+      <button class="tab-btn" data-tab="hacking">Ethical Hacking</button>
+      <button class="tab-btn" data-tab="tools">Tools & Techniques</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+    </div>
+    <div class="tab-content" id="network">
+      <ul>
+        <li>Network Fundamentals</li>
+        <li>TCP/IP & Protocols</li>
+        <li>Firewall & IDS Basics</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="hacking" style="display:none;">
+      <ul>
+        <li>Penetration Testing Basics</li>
+        <li>Vulnerability Assessment</li>
+        <li>Ethical Hacking Practices</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="tools" style="display:none;">
+      <ul>
+        <li>Kali Linux Tools Overview</li>
+        <li>Wireshark for Traffic Analysis</li>
+        <li>Burp Suite for Web Security</li>
+      </ul>
+    </div>
+    <div class="tab-content" id="projects" style="display:none;">
+      <ul>
+        <li>Simulated Penetration Test</li>
+        <li>Network Vulnerability Report</li>
+        <li>Final Project: Ethical Hacking Case Study</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Meet Your Mentors</h2>
+    <div class="mentors">
+      <div class="mentor-card">
+        <img src="customer.jpg" alt="Mentor 1">
+        <h4>James Carter</h4>
+        <p>Network Security Expert</p>
+      </div>
+      <div class="mentor-card">
+        <img src="customer.jpg" alt="Mentor 2">
+        <h4>Sophia Wang</h4>
+        <p>Ethical Hacking Specialist</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Student Reviews</h2>
+    <div class="reviews">
+      <div class="review-card"><h4>David M.</h4><p>"Learned practical cybersecurity skills. Loved the ethical hacking exercises."</p></div>
+      <div class="review-card"><h4>Sarah L.</h4><p>"Mentors explained complex topics clearly. Very hands-on."</p></div>
+      <div class="review-card"><h4>Michael B.</h4><p>"Great exposure to real-world tools and security practices."</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <button>Do I need prior experience?</button>
+      <div class="faq-answer">Basic networking knowledge is enough; all tools and techniques are taught from scratch.</div>
+    </div>
+    <div class="faq-item">
+      <button>Will I receive a certificate?</button>
+      <div class="faq-answer">Yes, an industry-recognized certificate and performance evaluation will be provided.</div>
+    </div>
+    <div class="faq-item">
+      <button>Can I perform real-world penetration tests?</button>
+      <div class="faq-answer">All exercises are simulated in a safe virtual lab environment.</div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="apply.html">Apply Now</a><br>
+    <a href="index.html" class="back">← Back to Programs</a>
+  </div>
+</div>
+
+<footer>&copy; 2025 AlgoSphere | Secure Your Future</footer>
+
+<script>
+// Tab functionality
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    tabContents.forEach(c => c.style.display = 'none');
+    document.getElementById(btn.dataset.tab).style.display = 'block';
+  });
+});
+
+// FAQ toggle
+const faqBtns = document.querySelectorAll('.faq-item button');
+faqBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    const answer = btn.nextElementSibling;
+    answer.classList.toggle('show');
+  });
+});
+</script>
+
+</body>
+</html>
